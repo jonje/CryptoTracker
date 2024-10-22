@@ -12,7 +12,12 @@ data class ValueLabel(
             val fractionDigits = when {
                 value > 1000 -> 0
                 value in 2f .. 999f -> 2
+                else  -> 3
             }
+            maximumFractionDigits = fractionDigits
+            minimumFractionDigits = 0
         }
+
+        return "${formatter.format(value)} $unit"
     }
 }
