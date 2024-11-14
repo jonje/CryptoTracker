@@ -99,9 +99,5 @@ fun LineChart(
             bottom = viewPortBottomY
         )
 
-        drawRect(
-            color = Color.green
-        )
-
     }
 }
